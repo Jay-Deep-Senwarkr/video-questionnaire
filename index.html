@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0A0E27;
-            --accent: #00D9FF;
-            --accent-dark: #00B8D4;
+            --primary: #4105FB;
+            --accent: #65ADFD;
+            --accent-dark: #4A8FE7;
             --bg-light: #F5F7FA;
             --bg-card: #FFFFFF;
             --text-primary: #1A1D2E;
@@ -18,7 +18,7 @@
             --success: #10B981;
             --error: #EF4444;
             --warning: #F59E0B;
-            --shadow: rgba(0, 217, 255, 0.1);
+            --shadow: rgba(101, 173, 253, 0.15);
         }
 
         * {
@@ -29,7 +29,7 @@
 
         body {
             font-family: 'DM Sans', sans-serif;
-            background: linear-gradient(135deg, #0A0E27 0%, #1A1D2E 50%, #0A0E27 100%);
+            background: linear-gradient(135deg, #4105FB 0%, #65ADFD 50%, #4105FB 100%);
             color: var(--text-primary);
             min-height: 100vh;
             padding: 2rem 1rem;
@@ -45,7 +45,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(101, 173, 253, 0.1) 0%, transparent 50%);
             animation: rotate 40s linear infinite;
             pointer-events: none;
         }
@@ -68,7 +68,7 @@
             border-radius: 20px;
             margin-bottom: 2rem;
             box-shadow: 0 20px 60px var(--shadow);
-            border: 1px solid rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(101, 173, 253, 0.15);
             position: relative;
             overflow: hidden;
         }
@@ -80,7 +80,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
         }
 
         .header h1 {
@@ -109,7 +109,7 @@
 
         .section:hover {
             box-shadow: 0 20px 60px var(--shadow);
-            border-color: rgba(0, 217, 255, 0.2);
+            border-color: rgba(101, 173, 253, 0.3);
         }
 
         .section-title {
@@ -187,7 +187,7 @@
         .form-input:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(0, 217, 255, 0.1);
+            box-shadow: 0 0 0 4px rgba(101, 173, 253, 0.15);
         }
 
         .form-input:invalid:not(:placeholder-shown) {
@@ -195,19 +195,19 @@
         }
 
         .form-input:valid:not(:placeholder-shown) {
-            border-color: var(--success);
+            border-color: var(--accent);
         }
 
         .info-box {
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(0, 184, 212, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(65, 5, 251, 0.08) 0%, rgba(101, 173, 253, 0.08) 100%);
             padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            border: 1px solid rgba(101, 173, 253, 0.3);
             margin-top: 1rem;
         }
 
         .info-box strong {
-            color: var(--accent-dark);
+            color: var(--primary);
             font-size: 1.125rem;
             display: block;
             margin-bottom: 0.5rem;
@@ -216,7 +216,7 @@
         .pricing-highlight {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
-            color: var(--accent-dark);
+            color: var(--primary);
             font-weight: 600;
             margin-top: 0.5rem;
         }
@@ -250,14 +250,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             color: white;
-            box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(101, 173, 253, 0.4);
         }
 
         .btn-primary:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 217, 255, 0.4);
+            box-shadow: 0 8px 30px rgba(101, 173, 253, 0.5);
         }
 
         .btn-primary:disabled {
@@ -295,9 +295,9 @@
         }
 
         .status-message.success {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid var(--success);
-            color: var(--success);
+            background: rgba(101, 173, 253, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--primary);
         }
 
         .status-message.error {
@@ -660,7 +660,7 @@
                 submitSpinner.style.display = 'inline-block';
             } else {
                 submitBtn.disabled = false;
-                submitText.textContent = 'Submit to Google Sheets';
+                submitText.textContent = 'Submit';
                 submitSpinner.style.display = 'none';
             }
         }
